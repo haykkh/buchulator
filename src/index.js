@@ -2,7 +2,7 @@
 import { app } from 'hyperapp'
 import { getStateFromStorage } from './utils/local-storage'
 import { View } from './views/'
-import './styles/app.scss'
+import 'bulma'
 
 const getInitialState = () => getStateFromStorage() || ({ items: [], value: '', placeholder: 'Add new todo' })
 
