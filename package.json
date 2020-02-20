@@ -21,7 +21,7 @@
     "swDest": "service-worker.js"
   },
   "standard": {
-  "parser": "babel-eslint",
+    "parser": "babel-eslint",
     "ignore": [
       "dist/",
       "release/"
@@ -37,6 +37,6 @@
   },
   "dependencies": {
     "@hyperapp/events": "^0.0.4",
-    "hyperapp": "^2.0.1"
+    "hyperapp": "^2.0.4"
   }
 }
