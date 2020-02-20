@@ -27,6 +27,8 @@
     "window": false
   },
 
+  "ignorePatterns": ["docs/"],
+
   "rules": {
     "accessor-pairs": "error",
     "arrow-spacing": ["error", { "before": true, "after": true }],

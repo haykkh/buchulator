@@ -9,7 +9,7 @@
   },
   "scripts": {
     "start": "standard && parcel src/index.html -p 3000 --open",
-    "build": "rm -rf build && standard && parcel build src/index.html -d docs --public-url ./"
+    "build": "rm -rf docs && standard && parcel build src/index.html -d docs --public-url ./"
   },
   "version": "0.3.0",
   "author": "Marcus Asplund <marcus@greatname.se> (@marcusasplund)",
@@ -24,7 +24,7 @@
     "parser": "babel-eslint",
     "ignore": [
       "dist/",
-      "release/"
+      "docs/"
     ]
   },
   "devDependencies": {
