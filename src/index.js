@@ -17,5 +17,5 @@ const getInitialState = () => getStateFromStorage() || ({
 app({
   init: getInitialState(),
   view: View,
-  node: document.getElementById('todo')
+  node: document.getElementById('buchulator')
 })
