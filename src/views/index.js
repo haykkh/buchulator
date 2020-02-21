@@ -1,17 +1,20 @@
 /* eslint-disable no-unused-vars */
 import { h } from 'hyperapp'
-import { HeaderView } from './header-view'
+import { Header } from './header'
+import { Calculator } from './calculator'
+import { Footer } from './footer'
 import { TodoList } from './todo-list'
 import { TodoInput } from './todo-input'
 import { TodoListDone } from './todo-list-done'
 import { StateDisplay } from './state-display'
 
-export const View = state =>
-  <div class='container'>
-    <HeaderView />
-    <TodoInput state={state} />
+export const View = state => (
+  <section class='hero is-fullheight'>
+    <Header />
+    <Calculator state={state} />
     <TodoList items={state.items} />
-    <hr />
     <TodoListDone items={state.items} />
     <StateDisplay state={state} />
-  </div>
+    <Footer />
+  </section>
+)
