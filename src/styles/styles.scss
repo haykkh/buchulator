@@ -1,0 +1,44 @@
+@font-face {
+	font-family: 'fixedsys';
+	src: local('Fixedsys Excelsior 3.01'), local('FixedsysExcelsiorIIIb'),
+		url('../fonts/FixedsysExcelsiorIIIb.woff2') format('woff2'),
+		url('../fonts/FixedsysExcelsiorIIIb.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+  }
+
+$footer-padding: 1rem;
+$table-cell-border: none;
+$link: hsl(48, 100%, 67%);
+$family-primary: fixedsys, monospace;
+
+.hero-head {
+	margin-top: 2rem; 
+}
+
+div.hero-body {
+	padding: 2rem;
+}
+
+footer.hero-foot {
+	font-family: fixedsys, monospace;
+	background-color: white;
+}
+
+.red {
+	color: crimson;
+}
+.table td.vertical-middle {
+	vertical-align: middle;
+}
+
+input.measurement {
+	width: 6rem;
+}
+
+p.unit {
+	width: 4rem;
+}
+
+@charset "utf-8";
+@import "../../node_modules/bulma/bulma.sass";
