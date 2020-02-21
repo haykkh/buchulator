@@ -17,7 +17,7 @@
     "url": "https://github.com/haykkh/buchulator-v2/issues"
   },
   "cache": {
-    "inDev": false,
+    "inDev": true,
     "swDest": "service-worker.js"
   },
   "devDependencies": {
