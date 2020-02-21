@@ -1,43 +1,52 @@
 {
-  "homepage": "https://github.com/marcusasplund/hyperapp-todo-simple#readme",
+  "homepage": "https://github.com/haykkh/buchulator-v2#readme",
   "license": "MIT",
   "main": "src/index.js",
-  "name": "hyperapp-todo-simple",
+  "name": "buchulator",
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/marcusasplund/hyperapp-todo-simple.git"
+    "url": "git+ssh://git@github.com/haykkh/buchulator-v2.git"
   },
   "scripts": {
-    "start": "standard && parcel src/index.html -p 3000 --open",
-    "build": "rm -rf docs && standard && parcel build src/index.html -d docs --public-url ./"
+    "start": "rm -rf dist && parcel src/index.html -p 3000 --open",
+    "build": "rm -rf docs && parcel build src/index.html -d docs --public-url ./"
   },
-  "version": "0.3.0",
-  "author": "Marcus Asplund <marcus@greatname.se> (@marcusasplund)",
+  "version": "0.0.0",
+  "author": "haykkh",
   "bugs": {
-    "url": "https://github.com/marcusasplund/hyperapp-todo-simple/issues"
+    "url": "https://github.com/haykkh/buchulator-v2/issues"
   },
   "cache": {
-    "inDev": true,
+    "inDev": false,
     "swDest": "service-worker.js"
-  },
-  "standard": {
-    "parser": "babel-eslint",
-    "ignore": [
-      "dist/",
-      "docs/"
-    ]
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-plugin-import": "^2.20.1",
     "parcel-bundler": "^1.12.3",
     "parcel-plugin-sw-cache": "^0.3.1",
-    "babel-eslint": "^10.0.3",
-    "sass": "^1.22.12",
-    "standard": "*"
+    "sass": "^1.22.12"
   },
   "dependencies": {
     "@hyperapp/events": "^0.0.4",
     "bulma": "^0.8.0",
-    "hyperapp": "^2.0.4"
+    "hyperapp": "^2.0.4",
+    "hyperapp-debug": "^1.0.0-beta.5"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env"
+    ],
+    "plugins": [
+      [
+        "@babel/transform-react-jsx",
+        {
+          "pragma": "h"
+        }
+      ]
+    ]
   }
 }
