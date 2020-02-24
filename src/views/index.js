@@ -7,8 +7,6 @@ const View = (state) => (
   <section class='hero is-fullheight'>
     <Header />
     <Calculator state={state} />
-    <TodoList items={state.items} />
-    <TodoListDone items={state.items} />
     <Footer />
   </section>
 );
