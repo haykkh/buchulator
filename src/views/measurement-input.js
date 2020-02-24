@@ -2,7 +2,16 @@ import { h } from 'hyperapp'
 import { storeStateInStorage } from '../states/local-storage'
 import { updateAll } from '../actions'
 
-export const MeasurementInput = ({ value, ratio, unit, unitType }) => (
+const Uniter = (metric, unitType) =>
+  metric
+  ? unitType === 'volume'
+    ? 'ml'
+    : 'g'
+  : unitType === 'volume'
+    ? 'fl oz'
+    : 'oz'
+
+export const MeasurementInput = ({ value, ratio, unitType, metric }) => (
   <td class="field has-addons">
     <p class="control">
       <input
@@ -23,7 +32,7 @@ export const MeasurementInput = ({ value, ratio, unit, unitType }) => (
     </p>
     <p class="control is-expanded unit">
       <a class={[unitType, " button is-static is-fullwidth"].join('')}>
-        {unit}
+        {Uniter(metric, unitType)}
       </a>
     </p>
   </td>
