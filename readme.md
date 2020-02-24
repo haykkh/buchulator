@@ -7,11 +7,11 @@
 ## Installing
 
 ```bash
-    git clone https://github.com/haykkh/buchulator-v2.git
+git clone https://github.com/haykkh/buchulator-v2.git
 
-    cd buchulator-v2
+cd buchulator-v2
 
-    yarn
+yarn
 ```
 
 ## Development
@@ -27,8 +27,7 @@ The browser will reload as you save new code. 🚀
 ### Build a release
 
 ```bash
-    yarn build
-
+yarn build
 ```
 
 ## Meta
