@@ -1,12 +1,12 @@
-import { storeStateInStorage } from '../states/local-storage'
+import { storeStateInStorage } from '../states/local-storage';
 
 const volumeConversionRatio = 0.03519508;
-const massConversionRatio = 0.035273
+const massConversionRatio = 0.035273;
 
-const rounder = num => Math.round((num + Number.EPSILON) * 100) / 100;
+const rounder = (num) => Math.round((num + Number.EPSILON) * 100) / 100;
 
 const innerHTMLSwapper = (elements, newHTML) => (
-  elements.map(x => x.innerHTML = newHTML)
+  elements.map((x) => x.innerHTML = newHTML)
 );
 
 const unitConvert = (state, volumeRatio, massRatio, metric) => {
@@ -17,11 +17,11 @@ const unitConvert = (state, volumeRatio, massRatio, metric) => {
     starterMass: rounder(state.starterMass * massRatio),
     teaMass: rounder(state.teaMass * massRatio),
     sugarMass: rounder(state.sugarMass * massRatio),
-    metric: metric,
-  }
-  storeStateInStorage(newState)
-  return newState
-}
+    metric,
+  };
+  storeStateInStorage(newState);
+  return newState;
+};
 
 const toImperial = () => (state) => {
   if (!document.getElementById('imperial').classList.contains('is-selected')) {
@@ -34,7 +34,7 @@ const toImperial = () => (state) => {
     return unitConvert(state, volumeConversionRatio, massConversionRatio, false);
   }
   return null;
-}
+};
 
 const toMetric = () => (state) => {
   if (!document.getElementById('metric').classList.contains('is-selected')) {
@@ -47,21 +47,21 @@ const toMetric = () => (state) => {
     return unitConvert(state, (1 / volumeConversionRatio), (1 / massConversionRatio), true);
   }
   return null;
-}
+};
 
-const updateAll = (state, {updateValue, ratio}) => {
-  const newContainer = updateValue / ratio
+const updateAll = (state, { updateValue, ratio }) => {
+  const newContainer = updateValue / ratio;
   const newState = {
-    containerVolume:  rounder(newContainer),
+    containerVolume: rounder(newContainer),
     hotWaterVolume: rounder(0.25 * newContainer),
     coldWaterVolume: rounder(0.625 * newContainer),
     starterMass: rounder(0.125 * newContainer),
     teaMass: rounder(0.005 * newContainer),
     sugarMass: rounder(0.05 * newContainer),
     metric: state.metric,
-  }
-  storeStateInStorage(newState)
-  return newState
-}
+  };
+  storeStateInStorage(newState);
+  return newState;
+};
 
-export { toImperial, toMetric, updateAll }
+export { toImperial, toMetric, updateAll };

@@ -5,6 +5,7 @@ module.exports = {
     'linebreak-style': 'off',
     'no-unused-vars': [2, { varsIgnorePattern: 'h' }],
     'react/jsx-uses-vars': 2,
+    'import/prefer-default-export': 0,
   },
   parser: 'babel-eslint',
   parserOptions: {

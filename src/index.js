@@ -2,7 +2,6 @@
 import { app } from 'hyperapp';
 import withDebug from 'hyperapp-debug';
 import { getStateFromStorage } from './states/local-storage';
-import { Actions } from './actions';
 import { View } from './views';
 import './styles/styles.scss';
 

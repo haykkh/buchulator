@@ -1,14 +1,14 @@
 /* eslint-disable no-unused-vars */
-import { h } from 'hyperapp'
-import { Header } from './header'
-import { Calculator } from './calculator'
-import { Footer } from './footer'
-import { TodoList } from './todo-list'
-import { TodoInput } from './todo-input'
-import { TodoListDone } from './todo-list-done'
-import { StateDisplay } from './state-display'
+import { h } from 'hyperapp';
+import { Header } from './header';
+import { Calculator } from './calculator';
+import { Footer } from './footer';
+import { TodoList } from './todo-list';
+import { TodoInput } from './todo-input';
+import { TodoListDone } from './todo-list-done';
+import { StateDisplay } from './state-display';
 
-export const View = state => (
+const View = (state) => (
   <section class='hero is-fullheight'>
     <Header />
     <Calculator state={state} />
@@ -17,4 +17,6 @@ export const View = state => (
     <StateDisplay state={state} />
     <Footer />
   </section>
-)
+);
+
+export { View };
