@@ -25,4 +25,4 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"./../fonts/FixedsysExcelsiorIIIb.woff2":[["FixedsysExcelsiorIIIb.5adf5829.woff2","wH6Y"],"wH6Y"],"./../fonts/FixedsysExcelsiorIIIb.ttf":[["FixedsysExcelsiorIIIb.4e4e3ab5.ttf","YHoT"],"YHoT"]}],"Focm":[function(require,module,exports) {
 "use strict";var e=require("hyperapp"),r=a(require("hyperapp-debug")),t=require("./states/local-storage"),s=require("./views");function a(e){return e&&e.__esModule?e:{default:e}}require("./styles/styles.scss");var u=function(){return(0,t.getStateFromStorage)()||{containerVolume:1e3,hotWaterVolume:250,coldWaterVolume:625,starterMass:125,teaMass:5,sugarMass:50,metric:!0}};(0,e.app)({init:u(),view:s.View,node:document.getElementById("buchulator")});
 },{"hyperapp":"xJOT","hyperapp-debug":"BLNv","./states/local-storage":"upUl","./views":"YiFH","./styles/styles.scss":"Hyr9"}]},{},["Focm"], null)
-//# sourceMappingURL=src.77386816.js.map
+//# sourceMappingURL=src.360e861d.js.map
