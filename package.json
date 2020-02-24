@@ -33,6 +33,8 @@
   "dependencies": {
     "@hyperapp/events": "^0.0.4",
     "bulma": "^0.8.0",
+    "eslint-plugin-jest": "^23.8.0",
+    "eslint-plugin-react": "^7.18.3",
     "hyperapp": "^2.0.4",
     "hyperapp-debug": "^1.0.0-beta.5"
   },
