@@ -9,15 +9,19 @@ const innerHTMLSwapper = (elements, newHTML) => (
   elements.map(x => x.innerHTML = newHTML)
 );
 
-const unitConvert = (state, volumeRatio, massRatio, metric) => ({
-  containerVolume: rounder(state.containerVolume * volumeRatio),
-  hotWaterVolume: rounder(state.hotWaterVolume * volumeRatio),
-  coldWaterVolume: rounder(state.coldWaterVolume * volumeRatio),
-  starterMass: rounder(state.starterMass * massRatio),
-  teaMass: rounder(state.teaMass * massRatio),
-  sugarMass: rounder(state.sugarMass * massRatio),
-  metric: metric,
-});
+const unitConvert = (state, volumeRatio, massRatio, metric) => {
+  const newState = {
+    containerVolume: rounder(state.containerVolume * volumeRatio),
+    hotWaterVolume: rounder(state.hotWaterVolume * volumeRatio),
+    coldWaterVolume: rounder(state.coldWaterVolume * volumeRatio),
+    starterMass: rounder(state.starterMass * massRatio),
+    teaMass: rounder(state.teaMass * massRatio),
+    sugarMass: rounder(state.sugarMass * massRatio),
+    metric: metric,
+  }
+  storeStateInStorage(newState)
+  return newState
+}
 
 const toImperial = () => (state) => {
   if (!document.getElementById('imperial').classList.contains('is-selected')) {
