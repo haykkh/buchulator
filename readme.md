@@ -7,9 +7,9 @@
 ## Installing
 
 ```bash
-git clone https://github.com/haykkh/buchulator-v2.git
+git clone https://github.com/haykkh/buchulator.git
 
-cd buchulator-v2
+cd buchulator
 
 yarn
 ```
