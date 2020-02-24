@@ -20,7 +20,7 @@ yarn
 yarn start
 ```
 
-Access [localhost:1234](http://localhost:1234).
+Access [localhost:3000](http://localhost:3000).
 
 The browser will reload as you save new code. 🚀
 
