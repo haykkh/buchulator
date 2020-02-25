@@ -14,7 +14,10 @@ $family-primary: fixedsys, monospace;
 
 .hero-head {
 	margin-top: 2rem; 
-	text-shadow: 2px 2px 0px #947600;
+	h1 {
+		text-shadow: 2px 2px 0px #947600;
+		font-size: 3rem;
+	}
 }
 
 div.hero-body {
