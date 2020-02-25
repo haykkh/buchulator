@@ -31,7 +31,7 @@ const toImperial = () => (state) => {
     innerHTMLSwapper(massElements, 'oz');
     document.getElementById('metric').setAttribute('class', 'button is-light');
     document.getElementById('imperial').setAttribute('class', 'button is-warning is-light is-selected');
-    return unitConvert(state, volumeConversionRatio, massConversionRatio, 0);
+    return unitConvert(state, volumeConversionRatio, massConversionRatio, false);
   }
   return null;
 };
@@ -44,7 +44,7 @@ const toMetric = () => (state) => {
     innerHTMLSwapper(massElements, 'g');
     document.getElementById('imperial').setAttribute('class', 'button is-light');
     document.getElementById('metric').setAttribute('class', 'button is-warning is-light is-selected');
-    return unitConvert(state, (1 / volumeConversionRatio), (1 / massConversionRatio), 1);
+    return unitConvert(state, (1 / volumeConversionRatio), (1 / massConversionRatio), true);
   }
   return null;
 };

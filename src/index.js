@@ -12,7 +12,7 @@ const getInitialState = () => getStateFromStorage() || ({
   starterMass: 125,
   teaMass: 5,
   sugarMass: 50,
-  metric: 1,
+  metric: true,
 });
 
 if (process.env.NODE_ENV === 'development') {
